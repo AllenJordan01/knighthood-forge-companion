@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knighthood - Calculadora Dwarven Foundry</title>
+    <!-- Linha 7: Vincula o design visual do arquivo style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Dwarven Foundry Simulator</h1>
+    
+    <div class="tabs">
+        <button id="btn-reverso" class="tab-btn active">Rota Reversa</button>
+        <button id="btn-direto" class="tab-btn">Simulação Direta</button>
+    </div>
+
+    <!-- MODO 1: ROTA REVERSA -->
+    <div id="modo-reverso">
+        <h2>Planejar Criação de Arma</h2>
+        <div class="form-group">
+            <label>Qual arma final você deseja obter?</label>
+            <select id="rev-arma">
+                <option value="1">Axe (Machado)</option>
+                <option value="2">Hammer (Martelo)</option>
+                <option value="3" selected>Sword (Espada)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Qual a raridade final do item?</label>
+            <select id="rev-raridade">
+                <option value="1">Rare (Rara)</option>
+                <option value="2">Epic (Épica)</option>
+                <option value="3" selected>Legendary (Lendária)</option>
+                <option value="4">Unique (Única)</option>
+            </select>
+        </div>
+        <button id="calc-reverso-btn" class="btn-calc">Calcular Rota de Insumos</button>
+    </div>
+
+    <!-- MODO 2: DIRETO -->
+    <div id="modo-direto" style="display:none;">
+        <h2>Prever Resultado do Inventário</h2>
+        <div class="form-group">
+            <label>Qual a RARIDADE ATUAL das armas que vai usar?</label>
+            <select id="dir-raridade">
+                <option value="1">Common (Comum) [Gasta 3 cópias]</option>
+                <option value="2">Rare (Rara) [Gasta 4 cópias]</option>
+                <option value="3">Epic (Épica) [Gasta 5 cópias]</option>
+                <option value="4">Legendary (Lendária) [Gasta 6 cópias]</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Qual a VANTAGEM / FORTE CONTRA dessas armas?</label>
+            <select id="dir-monstro">
+                <option value="1">Outlaw / Undead</option>
+                <option value="2">Beast / Cult / Demon / Troll</option>
+                <option value="3">Goblin / Golem / Militia</option>
+            </select>
+        </div>
+        <button id="calc-direto-btn" class="btn-calc">Simular Fusão</button>
+    </div>
+
+    <!-- CAIXA DE RESULTADO -->
+    <div id="resultado" class="result-box"></div>
+</div>
+
+<footer class="site-footer">
+    <p>Este site é um projeto de fã de código aberto e não é afiliado, associado ou endossado pelos desenvolvedores do Knighthood.</p>
+</footer>
+
+<!-- Linha 55: Vincula o cérebro lógico do arquivo script.js -->
+<script src="script.js"></script>
+</body>
+</html>
